@@ -74,7 +74,6 @@ async function run() {
                 _id: new ObjectId(id)
             }
             const options = { upsert: true }
-
             const updateData = {
                 $set: {
                     name: data.name,
@@ -91,6 +90,16 @@ async function run() {
                 updateData,
                 options
             )
+            res.send(result)
+        })
+
+        app.delete('/cartId/:id', async (req, res) => {
+            const id = req.params.id
+            console.log(id);
+            const query = {
+                _id: new ObjectId(id)
+            }
+            const result = await CartId.deleteOne(query)
             res.send(result)
         })
 
