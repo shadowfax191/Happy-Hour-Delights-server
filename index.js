@@ -11,8 +11,6 @@ const port = process.env.PORT || 5000;
 
 
 const uri = "mongodb+srv://shahariarhossain0599:9UrUR8m9KLsN8Z0O@cluster0.4bnj0wt.mongodb.net/?retryWrites=true&w=majority";
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,
