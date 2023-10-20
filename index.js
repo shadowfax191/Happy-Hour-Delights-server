@@ -5,6 +5,8 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 app.use(cors())
 app.use(express.json())
 
+
+
 const port = process.env.PORT || 5000;
 
 
@@ -116,7 +118,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send("curd is running")
+    res.send("express crud is running")
 })
 
 app.listen(port, () => {
