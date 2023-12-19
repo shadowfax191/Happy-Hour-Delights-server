@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 
 
 
-const uri = `mongodb+srv://${process.DB_ID}:${process.DB_PASS}@cluster0.4bnj0wt.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_ID}:${process.env.DB_PASS}@cluster0.4bnj0wt.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,
